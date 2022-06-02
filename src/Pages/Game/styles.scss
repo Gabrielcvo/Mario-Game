@@ -1,0 +1,56 @@
+.gameBoard {
+  width: 80%;
+  height: 500px;
+  border: 1px solid #333;
+  margin: 0 auto;
+  position: relative;
+
+  .pipeImg {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipeMove 2s infinite linear;
+  }
+
+  .marioImg {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .jump {
+    animation: marioJump 500ms, ease-out;
+  }
+}
+
+@keyframes marioJump {
+  0% {
+    bottom: 0;
+  }
+
+  40% {
+    bottom: 180px;
+  }
+
+  50% {
+    bottom: 180px;
+  }
+
+  60% {
+    bottom: 180px;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes pipeMove {
+  from {
+    right: 0;
+  }
+
+  to {
+    right: 101%;
+  }
+}
