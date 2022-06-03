@@ -3,10 +3,9 @@ import mario from "../../Assets/Gifs/mario.gif";
 import "./styles.scss";
 import { useEffect, useState } from "react";
 
-const pipepipe = document.querySelector(".pipeImg") as HTMLElement;
-const mariomario = document.querySelector(".marioImg") as HTMLElement;
-
 export function Game() {
+  const pipepipe = document.querySelector(".pipeImg") as HTMLElement;
+  const mariomario = document.querySelector(".marioImg") as HTMLElement;
   const [pulou, setPulou] = useState(false);
 
   const handleKeyDown = (event: any) => {
@@ -29,13 +28,16 @@ export function Game() {
   const loop = setInterval(() => {
     if (pipepipe !== null) {
       const pipePosition = pipepipe.offsetLeft;
-      const marioPosition = window.getComputedStyle(mariomario).bottom;
+      const marioPosition = +window
+        .getComputedStyle(mariomario)
+        .bottom.replace("px", "");
 
-      console.log(marioPosition);
-
-      if (pipePosition <= 120) {
+      if (pipePosition <= 120 && pipePosition > 0 && marioPosition < 80) {
         pipepipe.style.animation = "none";
         pipepipe.style.left = `${pipePosition}px`;
+
+        mariomario.style.animation = "none";
+        mariomario.style.bottom = `${marioPosition}px`;
       }
     }
   }, 10);
