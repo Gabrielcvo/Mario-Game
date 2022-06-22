@@ -1,0 +1,61 @@
+.background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+
+  .card {
+    background: #fff;
+    border-radius: 10px;
+    display: inline-block;
+    height: 300px;
+    margin: 1rem;
+    z-index: 10;
+    width: 500px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+
+    .restart {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 40px;
+
+      .score {
+        font-size: 30px;
+        font-weight: bold;
+      }
+
+      button {
+        border: none;
+        background: none;
+        font-size: 25px;
+        cursor: pointer;
+        font-weight: bold;
+        color: red;
+      }
+
+      a {
+        text-decoration: none;
+        color: red;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 25px;
+      }
+
+      .buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+      }
+    }
+  }
+}
