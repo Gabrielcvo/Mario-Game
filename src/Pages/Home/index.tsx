@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 
 import marioLogoImg from "../../Assets/Images/marioLogo.png";
+import playImg from "../../Assets/Images/play.png";
+import recordImg from "../../Assets/Images/record.png";
 import background from "../../Assets/Images/background.jpg";
 
 import "./styles.scss";
@@ -33,19 +35,13 @@ export default function Home() {
         <div className="card">
           <nav>
             <Link to="/game">
-              <img
-                src="https://fontmeme.com/permalink/220614/e54e998e8b39e6db941a1743ee043042.png"
-                alt="fonte-de-super-mario"
-              />
+              <img src={playImg} alt="fonte-de-super-mario" />
             </Link>
           </nav>
 
           <span className="record">
-            <img
-              src="https://fontmeme.com/permalink/220614/56cd8e91e5eacec311a83442be367c86.png"
-              alt="fonte-de-super-mario"
-            />
-            : <span style={{ marginBottom: 10 }}>{record}</span>
+            <img src={recordImg} alt="fonte-de-super-mario" />:{" "}
+            <span style={{ marginBottom: 10 }}>{record}</span>
           </span>
         </div>
       </div>
